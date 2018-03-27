@@ -2,7 +2,7 @@
 ln -s ~/jaenv/dotbash_profile ~/.bash_profile
 
 /bin/rm ~/.bashrc
-ln -s ~/jaenv/dotbash_rc ~/.bashrc
+ln -s ~/jaenv/dotbashrc ~/.bashrc
 
 /bin/rm ~/.emacs
 ln -s ~/jaenv/dotemacs ~/.emacs
