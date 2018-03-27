@@ -50,7 +50,7 @@ case $OSTYPE in
     #export PATH=$M2_HOME/bin:$ROO/bin:$PATH
     export ANDROID_HOME=/Users/jangeles/Library/Android
     #source ~/work/developer-productivity/ui/bin/joe-dotalias.bash
-    source ~/Dropbox/dotalias.bash
+    source ~/jaenv/dotalias.bash
     #source ~/Dropbox/dotalias.bash.BACKUP_20140721
     export GRADLE_OPTS=-Xmx1280m
     ;;
