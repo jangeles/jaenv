@@ -1,0 +1,8 @@
+/bin/rm ~/.bash_profile
+ln -s ~/jaenv/dotbash_profile ~/.bash_profile
+
+/bin/rm ~/.bashrc
+ln -s ~/jaenv/dotbash_rc ~/.bashrc
+
+/bin/rm ~/.emacs
+ln -s ~/jaenv/dotemacs ~/.emacs
