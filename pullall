@@ -1,0 +1,7 @@
+cd $APPDYNAMICS_HOME/developer-productivity ; git pull
+cd $APPDYNAMICS_HOME/controller ; git pull
+cd $APPDYNAMICS_HOME/reports-service ; git pull
+cd $APPDYNAMICS_HOME/db-agent ; git pull
+cd $APPDYNAMICS_HOME/analytics-codebase/analytics ; git pull
+cd $APPDYNAMICS_HOME/mothership ; git pull
+cd $APPDYNAMICS_HOME/demo-apps ; git pull
