@@ -119,11 +119,24 @@ alias ports='sudo lsof -i -P | grep -i "listen"'
 
 #useLocalEUM
 set-eum() {
-    if [ "$HOSTNAME" == "osxltjange" ] ; then
+    if [ "$HOSTNAME" == "jangeles-mac" ] ; then
         useShadowEUM
+        EUM_ACCOUNT=jangeles
+        EUM_APP_KEY_PREFIX=jange
+    elif [ "$HOSTNAME" == "pxdemo.corp.appdynamics.com" ] ; then
+        useLocalOnPremEUM
+        EUM_ACCOUNT=pxdemo
+        EUM_APP_KEY_PREFIX=pxd
     else
-        useShadowEUM
+        echo "set-eum failed for $HOSTNAME"
+        exit -1
     fi
+    echo "HOSTNAME=$HOSTNAME"
+    echo "EUM_ACCOUNT=$EUM_ACCOUNT"
+    echo "EUM_APP_KEY_PREFIX=$EUM_APP_KEY_PREFIX"
+    echo "USE_EUM_CLOUD=$USE_EUM_CLOUD"
+    echo "USE_EUM_ON_PREM=$USE_EUM_ON_PREM"
+    echo "USE_EUM_SHADOW=$USE_EUM_SHADOW"
 }
 
 alias dclean='docker stop $(docker ps -a -q) ; docker rm $(docker ps -a -q)'
