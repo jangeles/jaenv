@@ -1,0 +1,359 @@
+;; Object site-lisp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "site-lisp/"
+  :tables (list 
+   (semanticdb-table "actionscript-mode.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("cc-mode" include nil nil [1117 1135]) ("cc-fonts" include nil nil [1470 1489]) ("cc-langs" include nil nil [1448 1467]) ("c-add-language" code nil nil [1748 1794]) ("c-lang-defconst" code nil nil [1809 1926]) ("c-lang-defconst" code nil nil [1991 2182]) ("c-lang-defconst" code nil nil [2244 2309]) ("c-lang-defconst" code nil nil [2363 2448]) ("c-lang-defconst" code nil nil [2450 2543]) ("c-lang-defconst" code nil nil [2609 2701]) ("c-lang-defconst" code nil nil [2703 2778]) ("c-lang-defconst" code nil nil [2780 2847]) ("c-lang-defconst" code nil nil [2849 2923]) ("c-lang-defconst" code nil nil [3108 3229]) ("c-lang-defconst" code nil nil [3232 3303]) ("c-lang-defconst" code nil nil [3305 3369]) ("c-lang-defconst" code nil nil [3371 3436]) ("c-lang-defconst" code nil nil [3438 3516]) ("defgroup" code nil nil [3518 3637]) ("actionscript-mode-hook" variable nil nil [3639 3760]) ("actionscript-font-lock-extra-types" variable (:user-visible-flag t) nil [3762 3967]) ("actionscript-font-lock-keywords-1" variable (:constant-flag t :default-value (c-lang-const c-matchers-1 actionscript)) nil [3969 4105]) ("actionscript-font-lock-keywords-2" variable (:constant-flag t :default-value (c-lang-const c-matchers-2 actionscript)) nil [4107 4247]) ("actionscript-font-lock-keywords-3" variable (:constant-flag t :default-value (c-lang-const c-matchers-3 actionscript)) nil [4249 4393]) ("actionscript-font-lock-keywords" variable (:default-value actionscript-font-lock-keywords-3) nil [4395 4528]) ("actionscript-mode-syntax-table" variable nil nil [4530 4625]) ("or" code nil nil [4626 4772]) ("actionscript-mode-abbrev-table" variable nil nil [4774 4875]) ("c-define-abbrev-table" code nil nil [4877 5206]) ("actionscript-mode-map" variable (:default-value (let ((map (c-make-inherited-keymap))) map)) nil [5208 5411]) ("easy-menu-define" code nil nil [5413 5867]) ("add-to-list" code nil nil [5884 5948]) ("actionscript-mode" function (:user-visible-flag t) nil [5965 7258]) ("actionscript-mode" package nil nil [7262 7290]))
+    :file "actionscript-mode.el"
+    :pointmax 7291
+    )
+   (semanticdb-table "ecmascript-mode.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("font-lock" include nil nil [1578 1598]) ("cc-mode" include nil nil [1599 1617]) ("regexp-opt" include nil nil [1639 1660]) ("ecmascript-mode-version" variable (:constant-flag t :default-value "1.1") nil [1663 1739]) ("defgroup" code nil nil [1741 1854]) ("ecmascript-mode-hook" variable nil nil [1856 1971]) ("ecmascript-mode-map" variable (:default-value (c-make-inherited-keymap)) nil [1973 2073]) ("define-derived-mode" code nil nil [2090 2784]) ("ecmascript-font-lock-default-face" variable (:default-value (quote ecmascript-font-lock-default-face)) nil [2786 2863]) ("ecmascript-font-lock-keywords-1" variable (:constant-flag t :default-value (append java-font-lock-keywords-1 (list (quote ("\\<\\(function\\)\\>\\(?:\\s-+\\(\\sw+\\)\\)?" (1 font-lock-keyword-face t) (2 font-lock-function-name-face nil t))) (quote ("\\<\\(var\\)\\>\\(?:\\s-+\\(\\sw+\\)\\)?" (1 font-lock-keyword-face t) (2 font-lock-variable-name-face nil t)))))) nil [2865 3326]) ("ecmascript-font-lock-keywords-2" variable (:constant-flag t :default-value (append java-font-lock-keywords-2 ecmascript-font-lock-keywords-1 (list (quote ("\\<\\(debugger\\|delete\\|export\\|in\\|typeof\\|with\\)\\>" (1 font-lock-keyword-face t))) (list (concat "\\<\\(" (mapconcat (quote identity) java-font-lock-extra-types nil) "\\)\\>\\.") (quote (1 font-lock-type-face nil t))) (quote ("\\<\\(void\\)\\>\\(?:\\s-+\\(\\sw+\\)\\)?" (1 font-lock-keyword-face t) (2 ecmascript-font-lock-default-face t t))) (quote ("\\<\\(Infinity\\|NaN\\|undefined\\)\\>" 0 font-lock-constant-face t)) (list (concat "\\<Number\\." (regexp-opt (quote ("MAX_VALUE" "MIN_VALUE" "NaN" "NEGATIVE_INFINITY" "POSITIVE_INFINITY")) t) "\\>") (quote (1 font-lock-constant-face))) (list (concat "\\<Math\\." (regexp-opt (quote ("E" "LN10" "LN2" "LOG2E" "LOG10E" "PI" "SQRT1_2" "SQRT2")) t) "\\>") (quote (1 font-lock-constant-face)))))) nil [3328 4686]) ("ecmascript-font-lock-keywords-3" variable (:constant-flag t :default-value (append java-font-lock-keywords-3 ecmascript-font-lock-keywords-2 (list (quote ("\\<Date\\.\\(parse\\|UTC\\)\\>" 1 font-lock-builtin-face)) (list (concat "\\<Math\\." (regexp-opt (quote ("abs" "acos" "asin" "atan" "atan2" "ceil" "cos" "exp" "floor" "log" "max" "min" "pow" "random" "round" "sin" "sqrt" "tan")) t) "\\>") (quote (1 font-lock-builtin-face))) (list (regexp-opt (quote ("decodeURI" "decodeURIComponent" "encodeURI" "encodeURIComponent" "eval" "isFinite" "isNaN" "parseFloat" "parseInt")) (quote words)) (quote (0 font-lock-builtin-face))) (list (concat "\\." (regexp-opt (quote ("hasOwnProperty" "isPrototypeOf" "propertyIsEnumerable" "toLocaleString" "toString" "valueOf" "apply" "call" "concat" "join" "pop" "push" "reverse" "shift" "slice" "sort" "splice" "unshift" "charAt" "charCodeAt" "fromCharCode" "indexOf" "lastIndexOf" "localeCompare" "match" "replace" "search" "split" "substring" "toLocaleLowerCase" "toLocaleUpperCase" "toLowerCase" "toUpperCase" "toExponential" "toFixed" "toPrecision" "getDate" "getDay" "getFullYear" "getHours" "getMilliseconds" "getMinutes" "getMonth" "getSeconds" "getTime" "getTimezoneOffset" "getUTCDate" "getUTCDay" "getUTCFullYear" "getUTCHours" "getUTCMilliseconds" "getUTCMinutes" "getUTCMonth" "getUTCSeconds" "setDate" "setFullYear" "setHours" "setMilliseconds" "setMinutes" "setMonth" "setSeconds" "setTime" "setUTCDate" "setUTCFullYear" "setUTCHours" "setUTCMilliseconds" "setUTCMinutes" "setUTCMonth" "setUTCSeconds" "toDateString" "toLocaleDateString" "toLocaleString" "toLocaleTimeString" "toTimeString" "toUTCString" "exec" "test")) t) "\\>") (quote (1 font-lock-builtin-face)))))) nil [4688 7463]) ("ecmascript-mode" package nil nil [7465 7491]))
+    :file "ecmascript-mode.el"
+    :pointmax 7526
+    )
+   (semanticdb-table "gnuserv-compat.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("cl" include nil nil [2085 2098]) ("unless" code nil nil [2961 3590]) ("unless" code nil nil [2816 2955]) ("unless" code nil nil [2566 2757]) ("unless" code nil nil [2245 2518]) ("unless" code nil nil [2120 2241]) ("if" code nil nil [3754 5359]) ("if" code nil nil [5556 5821]) ("unless" code nil nil [5985 6100]) ("unless" code nil nil [6102 6187]) ("unless" code nil nil [6301 6421]) ("if" code nil nil [6643 7076]) ("condition-case" code nil nil [6581 6640]) ("gnuserv" include nil nil [7101 7119]) ("gnuserv-compat" package nil nil [7121 7146]))
+    :file "gnuserv-compat.el"
+    :pointmax 7180
+    )
+   (semanticdb-table "TypeScript.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("typescripton" include nil nil [2157 2186]) ("moz" include nil nil [2134 2154]) ("easymenu" include nil nil [2112 2131]) ("thingatpt" include nil nil [2089 2109]) ("etags" include nil nil [2070 2086]) ("imenu" include nil nil [2051 2067]) ("newcomment" include nil nil [2027 2048]) ("font-lock" include nil nil [2004 2024]) ("cc-mode" include nil nil [1983 2001]) ("ido" include nil nil [2246 2260]) ("comint" include nil nil [2226 2243]) ("cl" include nil nil [2210 2223]) ("inferior-moz-buffer" variable nil nil [2263 2291]) ("moz-repl-name" variable nil nil [2292 2314]) ("ido-cur-list" variable nil nil [2315 2336]) ("declare-function" code nil nil [2337 2373]) ("declare-function" code nil nil [2374 2430]) ("typescript--name-start-re" variable (:constant-flag t :default-value "[a-zA-Z_$]") nil [2447 2572]) ("typescript--stmt-delim-chars" variable (:constant-flag t :default-value "^;{}?:") nil [2574 2622]) ("typescript--name-re" variable (:constant-flag t :default-value (concat typescript--name-start-re "\\(?:\\s_\\|\\sw\\)*")) nil [2624 2805]) ("typescript--objfield-re" variable (:constant-flag t :default-value (concat typescript--name-re ":")) nil [2807 2934]) ("typescript--dotted-name-re" variable (:constant-flag t :default-value (concat typescript--name-re "\\(?:\\." typescript--name-re "\\)*")) nil [2936 3108]) ("typescript--cpp-name-re" variable (:constant-flag t :default-value typescript--name-re) nil [3110 3207]) ("typescript--opt-cpp-start" variable (:constant-flag t :default-value "^\\s-*#\\s-*\\([[:alnum:]]+\\)") nil [3209 3463]) ("typescript--plain-method-re" variable (:constant-flag t :default-value (concat "^\\s-*?\\(" typescript--dotted-name-re "\\)\\.prototype" "\\.\\(" typescript--name-re "\\)\\s-*?=\\s-*?\\(function\\)\\_>")) nil [3465 3833]) ("typescript--plain-class-re" variable (:constant-flag t :default-value (concat "^\\s-*\\(" typescript--dotted-name-re "\\)\\.prototype" "\\s-*=\\s-*{")) nil [3835 4101]) ("typescript--mp-class-decl-re" variable (:constant-flag t :default-value (concat "^\\s-*var\\s-+" "\\(" typescript--name-re "\\)" "\\s-*=\\s-*" "\\(" typescript--dotted-name-re "\\)\\.extend\\(?:Final\\)?\\s-*(\\s-*{?\\s-*$")) nil [4139 4373]) ("typescript--prototype-obsolete-class-decl-re" variable (:constant-flag t :default-value (concat "^\\s-*\\(?:var\\s-+\\)?" "\\(" typescript--dotted-name-re "\\)" "\\s-*=\\s-*Class\\.create()")) nil [4408 4589]) ("typescript--prototype-objextend-class-decl-re-1" variable (:constant-flag t :default-value (concat "^\\s-*Object\\.extend\\s-*(" "\\(" typescript--dotted-name-re "\\)" "\\s-*,\\s-*{")) nil [4591 4764]) ("typescript--prototype-objextend-class-decl-re-2" variable (:constant-flag t :default-value (concat "^\\s-*\\(?:var\\s-+\\)?" "\\(" typescript--dotted-name-re "\\)" "\\s-*=\\s-*Object\\.extend\\s-*(")) nil [4766 4956]) ("typescript--prototype-class-decl-re" variable (:constant-flag t :default-value (concat "^\\s-*\\(?:var\\s-+\\)?" "\\(" typescript--name-re "\\)" "\\s-*=\\s-*Class\\.create\\s-*(\\s-*" "\\(?:\\(" typescript--dotted-name-re "\\)\\s-*,\\s-*\\)?{?")) nil [4991 5236]) ("typescript--dojo-class-decl-re" variable (:constant-flag t :default-value (concat "^\\s-*dojo\\.declare\\s-*(\"\\(" typescript--dotted-name-re "\\)")) nil [5353 5472]) ("typescript--exttypescript-class-decl-re-1" variable (:constant-flag t :default-value (concat "^\\s-*Ext\\.extend\\s-*(" "\\s-*\\(" typescript--dotted-name-re "\\)" "\\s-*,\\s-*\\(" typescript--dotted-name-re "\\)")) nil [5474 5744]) ("typescript--exttypescript-class-decl-re-2" variable (:constant-flag t :default-value (concat "^\\s-*\\(?:var\\s-+\\)?" "\\(" typescript--name-re "\\)" "\\s-*=\\s-*Ext\\.extend\\s-*(\\s-*" "\\(" typescript--dotted-name-re "\\)")) nil [5746 6039]) ("typescript--mochikit-class-re" variable (:constant-flag t :default-value (concat "^\\s-*MochiKit\\.Base\\.update\\s-*(\\s-*" "\\(" typescript--dotted-name-re "\\)")) nil [6041 6235]) ("typescript--dummy-class-style" variable (:constant-flag t :default-value (quote (:name "[Automatically Generated Class]"))) nil [6237 6322]) ("typescript--class-styles" variable (:constant-flag t :default-value (\` ((:name "Plain" :class-decl (\, typescript--plain-class-re) :prototype t :contexts (toplevel) :framework typescript) (:name "MochiKit" :class-decl (\, typescript--mochikit-class-re) :prototype t :contexts (toplevel) :framework mochikit) (:name "Prototype (Obsolete)" :class-decl (\, typescript--prototype-obsolete-class-decl-re) :contexts (toplevel) :framework prototype) (:name "Prototype (Modern)" :class-decl (\, typescript--prototype-class-decl-re) :contexts (toplevel) :framework prototype) (:name "Prototype (Object.extend)" :class-decl (\, typescript--prototype-objextend-class-decl-re-1) :prototype t :contexts (toplevel) :framework prototype) (:name "Prototype (Object.extend) 2" :class-decl (\, typescript--prototype-objextend-class-decl-re-2) :prototype t :contexts (toplevel) :framework prototype) (:name "Dojo" :class-decl (\, typescript--dojo-class-decl-re) :contexts (toplevel) :framework dojo) (:name "ExtTYPESCRIPT (style 1)" :class-decl (\, typescript--exttypescript-class-decl-re-1) :prototype t :contexts (toplevel) :framework exttypescript) (:name "ExtTYPESCRIPT (style 2)" :class-decl (\, typescript--exttypescript-class-decl-re-2) :contexts (toplevel) :framework exttypescript) (:name "Merrill Press" :class-decl (\, typescript--mp-class-decl-re) :contexts (toplevel) :framework merrillpress)))) nil [6324 8957]) ("typescript--available-frameworks" variable (:constant-flag t :default-value (loop with available-frameworks for style in typescript--class-styles for framework = (plist-get style :framework) unless (memq framework available-frameworks) collect framework into available-frameworks finally return available-frameworks)) nil [8959 9338]) ("typescript--function-heading-1-re" variable (:constant-flag t :default-value (concat "^\\s-*function\\s-+\\(" typescript--name-re "\\)")) nil [9340 9555]) ("typescript--function-heading-2-re" variable (:constant-flag t :default-value (concat "^\\s-*\\(" typescript--name-re "\\)\\s-*:\\s-*function\\_>")) nil [9557 9794]) ("typescript--function-heading-3-re" variable (:constant-flag t :default-value (concat "^\\s-*\\(?:var\\s-+\\)?\\(" typescript--dotted-name-re "\\)" "\\s-*=\\s-*function\\_>")) nil [9796 10047]) ("typescript--macro-decl-re" variable (:constant-flag t :default-value (concat "^\\s-*#\\s-*define\\s-+\\(" typescript--cpp-name-re "\\)\\s-*(")) nil [10049 10276]) ("typescript--regexp-opt-symbol" function (:arguments ("list")) nil [10278 10442]) ("typescript--keyword-re" variable (:constant-flag t :default-value (typescript--regexp-opt-symbol (quote ("any" "bool" "break" "case" "catch" "class" "constructor" "continue" "declare" "default" "delete" "do" "else" "enum" "export" "extends" "extern" "false" "finally" "for" "function" "goto" "if" "implements" "import" "in" "instanceof" "interface" "module" "new" "null" "number" "private" "public" "return" "static" "string" "super" "switch" "this" "throw" "true" "try" "typeof" "var" "void" "while")))) nil [10444 11002]) ("typescript--basic-type-re" variable (:constant-flag t :default-value (typescript--regexp-opt-symbol (quote ("bool" "string" "number" "any" "void")))) nil [11004 11185]) ("typescript--constant-re" variable (:constant-flag t :default-value (typescript--regexp-opt-symbol (quote ("false" "null" "undefined" "Infinity" "NaN" "true" "arguments" "this")))) nil [11187 11467]) ("typescript--font-lock-keywords-1" variable (:constant-flag t :default-value (list "\\_<import\\_>" (list typescript--function-heading-1-re 1 font-lock-function-name-face) (list typescript--function-heading-2-re 1 font-lock-function-name-face))) nil [11470 11748]) ("typescript--font-lock-keywords-2" variable (:constant-flag t :default-value (append typescript--font-lock-keywords-1 (list (list typescript--keyword-re 1 font-lock-keyword-face) (list "\\_<for\\_>" "\\s-+\\(each\\)\\_>" nil nil (list 1 (quote font-lock-keyword-face))) (cons typescript--basic-type-re font-lock-type-face) (cons typescript--constant-re font-lock-constant-face)))) nil [11750 12249]) ("typescript--pitem" type (:members ("children" "paren-depth" "type" "h-begin" "name" "b-end") :type "struct") nil [14682 16097]) ("typescript--initial-pitem" variable (:constant-flag t :default-value (make-typescript--pitem :paren-depth most-negative-fixnum :type (quote toplevel))) nil [16135 16254]) ("defgroup" code nil nil [16280 16394]) ("typescript-indent-level" variable (:default-value 4) nil [16396 16540]) ("typescript-expr-indent-offset" variable nil nil [16542 16766]) ("typescript-auto-indent-flag" variable (:default-value t) nil [16768 17003]) ("typescript-flat-functions" variable nil nil [17005 17211]) ("typescript-comment-lineup-func" variable (:default-value (function c-lineup-C-comments)) nil [17213 17394]) ("typescript-enabled-frameworks" variable (:default-value typescript--available-frameworks) nil [17396 17801]) ("typescript-typescript-switch-tabs" variable (:default-value (and (memq system-type (quote (darwin))) t)) nil [17803 18119]) ("typescript-typescript-tmpdir" variable (:default-value "~/.emacs.d/typescript/typescript") nil [18121 18389]) ("typescript-typescript-timeout" variable (:default-value 5) nil [18391 18636]) ("typescript-mode-map" variable (:default-value (let ((keymap (make-sparse-keymap))) (mapc (lambda (key) (define-key keymap key (function typescript-insert-and-indent))) (quote ("{" "}" "(" ")" ":" ";" ","))) (define-key keymap [(control 99) (meta 58)] (function typescript-eval)) (define-key keymap [(control 99) (control 106)] (function typescript-set-typescript-context)) (define-key keymap [(control meta 120)] (function typescript-eval-defun)) (define-key keymap [(meta 46)] (function typescript-find-symbol)) (easy-menu-define nil keymap "typescript Menu" (quote ("typescript" ["Select new Mozilla context…" typescript-set-typescript-context (fboundp (function inferior-moz-process))] ["Evaluate expression in Mozilla context…" typescript-eval (fboundp (function inferior-moz-process))] ["Send current function to Mozilla…" typescript-eval-defun (fboundp (function inferior-moz-process))]))) keymap)) nil [18650 19577]) ("typescript-insert-and-indent" function (:user-visible-flag t :arguments ("key")) nil [19579 20161]) ("typescript-mode-syntax-table" variable (:default-value (let ((table (make-syntax-table))) (c-populate-syntax-table table) (modify-syntax-entry 36 "_" table) table)) nil [20194 20394]) ("typescript--quick-match-re" variable nil nil [20396 20514]) ("typescript--quick-match-re-func" variable nil nil [20516 20646]) ("make-variable-buffer-local" code nil nil [20648 20704]) ("make-variable-buffer-local" code nil nil [20705 20766]) ("typescript--cache-end" variable (:default-value 1) nil [20768 20873]) ("make-variable-buffer-local" code nil nil [20874 20925]) ("typescript--last-parse-pos" variable nil nil [20927 21031]) ("make-variable-buffer-local" code nil nil [21032 21088]) ("typescript--state-at-last-parse-pos" variable nil nil [21090 21187]) ("make-variable-buffer-local" code nil nil [21188 21253]) ("typescript--flatten-list" function (:arguments ("list")) nil [21255 21448]) ("typescript--maybe-join" function (:arguments ("prefix" "separator" "suffix" "&rest" "list")) nil [21450 21968]) ("typescript--update-quick-match-re" function nil nil [21970 23715]) ("typescript--forward-text-property" function (:arguments ("propname")) nil [23717 24281]) ("typescript--backward-text-property" function (:arguments ("propname")) nil [24283 24927]) ("typescript--forward-pstate" function nil nil [24929 25027]) ("typescript--backward-pstate" function nil nil [25029 25129]) ("typescript--pitem-goto-h-end" function (:arguments ("pitem")) nil [25131 25254]) ("typescript--re-search-forward-inner" function (:arguments ("regexp" "&optional" "bound" "count")) nil [25256 26443]) ("typescript--re-search-forward" function (:arguments ("regexp" "&optional" "bound" "noerror" "count")) nil [26446 27335]) ("typescript--re-search-backward-inner" function (:arguments ("regexp" "&optional" "bound" "count")) nil [27338 28597]) ("typescript--re-search-backward" function (:arguments ("regexp" "&optional" "bound" "noerror" "count")) nil [28600 29491]) ("typescript--forward-expression" function nil nil [29493 30093]) ("typescript--forward-function-decl" function nil nil [30095 30891]) ("typescript--function-prologue-beginning" function (:arguments ("&optional" "pos")) nil [30893 32001]) ("typescript--beginning-of-defun-raw" function nil nil [32003 32451]) ("typescript--pstate-is-toplevel-defun" function (:arguments ("pstate")) nil [32453 32935]) ("typescript--beginning-of-defun-nested" function nil nil [32937 33720]) ("typescript--beginning-of-defun-flat" function nil nil [33722 33958]) ("typescript-beginning-of-defun" function (:arguments ("&optional" "arg")) nil [33960 35082]) ("typescript--flush-caches" function (:user-visible-flag t :arguments ("&optional" "beg" "ignored")) nil [35084 35409]) ("typescript--debug" function (:arguments ("&rest" "arguments")) nil [35411 35488]) ("typescript--ensure-cache--pop-if-ended" function (:arguments ("open-items" "paren-depth")) nil [35490 36197]) ("typescript--ensure-cache--update-parse" function nil nil [36199 37757]) ("typescript--show-cache-at-point" function nil nil [37759 37956]) ("typescript--split-name" function (:arguments ("string")) nil [37958 38382]) ("typescript--guess-function-name-start" variable nil nil [38384 38434]) ("typescript--guess-function-name" function (:arguments ("position")) nil [38436 39458]) ("typescript--clear-stale-cache" function nil nil [39460 39920]) ("typescript--ensure-cache" function (:arguments ("&optional" "limit")) nil [39922 46430]) ("typescript--end-of-defun-flat" function nil nil [46432 46794]) ("typescript--end-of-defun-nested" function nil nil [46796 47809]) ("typescript-end-of-defun" function (:arguments ("&optional" "arg")) nil [47811 49004]) ("typescript--beginning-of-macro" function (:arguments ("&optional" "lim")) nil [49006 49426]) ("typescript--backward-syntactic-ws" function (:arguments ("&optional" "lim")) nil [49428 50007]) ("typescript--forward-syntactic-ws" function (:arguments ("&optional" "lim")) nil [50009 50514]) ("typescript--up-nearby-list" function nil nil [50580 50824]) ("typescript--inside-param-list-p" function nil nil [50826 51222]) ("typescript--inside-dojo-class-list-p" function nil nil [51224 51671]) ("typescript--syntax-begin-function" function nil nil [51673 52040]) ("typescript--make-framework-matcher" function (:arguments ("framework" "&rest" "regexps")) nil [52056 52519]) ("typescript--tmp-location" variable nil nil [52521 52558]) ("make-variable-buffer-local" code nil nil [52559 52613]) ("typescript--forward-destructuring-spec" function (:arguments ("&optional" "func")) nil [52615 54311]) ("typescript--variable-decl-matcher" function (:arguments ("limit")) nil [54313 55918]) ("typescript--font-lock-keywords-3" variable (:constant-flag t :default-value (\` ((\,@ cpp-font-lock-keywords) (\,@ typescript--font-lock-keywords-2) ("\\.\\(prototype\\)\\_>" (1 font-lock-constant-face)) (typescript--class-decl-matcher (\, (concat "\\(" typescript--name-re "\\)\\(?:\\.\\|.*$\\)")) (goto-char (match-beginning 1)) nil (1 font-lock-type-face)) (typescript--class-decl-matcher (\, (concat "\\(" typescript--name-re "\\)\\(?:\\.\\|.*$\\)")) (if (match-beginning 2) (progn (setq typescript--tmp-location (match-end 2)) (goto-char typescript--tmp-location) (insert "=") (goto-char (match-beginning 2))) (setq typescript--tmp-location nil) (goto-char (point-at-eol))) (when typescript--tmp-location (save-excursion (goto-char typescript--tmp-location) (delete-char 1))) (1 font-lock-type-face)) (typescript--class-decl-matcher (2 font-lock-type-face nil t)) ((\, (typescript--make-framework-matcher (quote dojo) "^\\s-*dojo\\.declare\\s-*(\"" "\\(" typescript--dotted-name-re "\\)" "\\(?:\"\\s-*,\\s-*\\(" typescript--dotted-name-re "\\)\\)?")) (1 font-lock-type-face t) (2 font-lock-type-face nil t)) ((\, (typescript--make-framework-matcher (quote dojo) "^\\s-*dojo\\.declare\\s-*(\"" "\\(" typescript--dotted-name-re "\\)\"\\s-*,\\s-*\\[")) (\, (concat "[[,]\\s-*\\(" typescript--dotted-name-re "\\)\\s-*" "\\(?:\\].*$\\)?")) (backward-char) (end-of-line) (1 font-lock-type-face)) ((\, (typescript--make-framework-matcher (quote dojo) "^\\s-*" typescript--dotted-name-re "\\s-*[],]")) (\, (concat "\\(" typescript--dotted-name-re "\\)" "\\s-*\\(?:\\].*$\\)?")) (if (save-excursion (backward-char) (typescript--inside-dojo-class-list-p)) (forward-symbol -1) (end-of-line)) (end-of-line) (1 font-lock-type-face)) (\, (list (concat "\\_<\\(const\\|var\\|let\\)\\_>\\|" typescript--basic-type-re) (list (function typescript--variable-decl-matcher) nil nil nil))) (\, (list (concat "\\_<new\\_>\\s-+\\(" typescript--dotted-name-re "\\)") (list 1 (quote font-lock-type-face)))) (\, (list (concat "\\_<instanceof\\_>\\s-+\\(" typescript--dotted-name-re "\\)") (list 1 (quote font-lock-type-face)))) (\, (list (concat "\\_<function\\_>\\(\\s-+" typescript--name-re "\\)?\\s-*(\\s-*" typescript--name-start-re) (list (concat "\\(" typescript--name-re "\\)\\(\\s-*).*\\)?") (quote (backward-char)) (quote (end-of-line)) (quote (1 font-lock-variable-name-face))))) (\, (list (concat "^\\s-*" typescript--name-re "\\s-*[,)]") (list typescript--name-re (quote (if (save-excursion (backward-char) (typescript--inside-param-list-p)) (forward-symbol -1) (end-of-line))) (quote (end-of-line)) (quote (0 font-lock-variable-name-face)))))))) nil [55920 59839]) ("typescript--inside-pitem-p" function (:arguments ("pitem")) nil [59841 60236]) ("typescript--parse-state-at-point" function nil nil [60238 61154]) ("typescript--syntactic-context-from-pstate" function (:arguments ("pstate")) nil [61156 61464]) ("typescript-syntactic-context" function (:user-visible-flag t) nil [61466 61913]) ("typescript--class-decl-matcher" function (:arguments ("limit")) nil [61915 62852]) ("typescript--font-lock-keywords" variable (:constant-flag t :default-value (quote (typescript--font-lock-keywords-3 typescript--font-lock-keywords-1 typescript--font-lock-keywords-2 typescript--font-lock-keywords-3))) nil [62854 63175]) ("typescript--regexp-literal" variable (:constant-flag t :default-value "[=(,:]\\(?:\\s-\\|
+\\)*\\(/\\)\\(?:\\\\/\\|[^/*]\\)\\(?:\\\\/\\|[^/]\\)*\\(/\\)") nil [63325 63594]) ("typescript-font-lock-syntactic-keywords" variable (:constant-flag t :default-value (\` (((\, typescript--regexp-literal) (1 "|") (2 "|"))))) nil [63676 63868]) ("typescript--possibly-braceless-keyword-re" variable (:constant-flag t :default-value (typescript--regexp-opt-symbol (quote ("catch" "do" "else" "finally" "for" "if" "try" "while" "with" "each")))) nil [63887 64123]) ("typescript--indent-operator-re" variable (:constant-flag t :default-value (concat "[-+*/%<>=&^|?:.]\\([^-+*/]\\|$\\)\\|" (typescript--regexp-opt-symbol (quote ("in" "instanceof"))))) nil [64125 64359]) ("typescript--looking-at-operator-p" function nil nil [64362 64744]) ("typescript--continued-expression-p" function nil nil [64747 65341]) ("typescript--end-of-do-while-loop-p" function (:user-visible-flag t) nil [65344 66355]) ("typescript--ctrl-statement-indentation" function nil nil [66358 67325]) ("typescript--get-c-offset" function (:arguments ("symbol" "anchor")) nil [67327 67522]) ("typescript--proper-indentation" function (:arguments ("parse-status")) nil [67524 69119]) ("typescript-indent-line" function (:user-visible-flag t) nil [69121 69512]) ("typescript-c-fill-paragraph" function (:user-visible-flag t :arguments ("&optional" "justify")) nil [69527 70061]) ("typescript--pitem-format" function (:arguments ("pitem")) nil [70651 70921]) ("typescript--make-merged-item" function (:arguments ("item" "child" "name-parts")) nil [70923 72877]) ("typescript--pitem-strname" function (:arguments ("pitem")) nil [72879 73086]) ("typescript--splice-into-items" function (:arguments ("items" "child" "name-parts")) nil [73088 76438]) ("typescript--pitem-add-child" function (:arguments ("pitem" "child")) nil [76440 77813]) ("typescript--maybe-make-marker" function (:arguments ("location")) nil [77815 78011]) ("typescript--pitems-to-imenu" function (:arguments ("pitems" "unknown-ctr")) nil [78013 79592]) ("typescript--imenu-create-index" function nil nil [79594 80497]) ("which-func-imenu-joiner-function" variable nil nil [80524 80565]) ("typescript--which-func-joiner" function (:arguments ("parts")) nil [80567 80647]) ("typescript--imenu-to-flat" function (:arguments ("items" "prefix" "symbols")) nil [80649 81162]) ("typescript--get-all-known-symbols" function nil nil [81164 81863]) ("typescript--symbol-history" variable nil nil [81865 81947]) ("typescript--read-symbol" function (:arguments ("symbols-table" "prompt" "&optional" "initial-input")) nil [81949 82681]) ("typescript--guess-symbol-at-point" function nil nil [82683 83007]) ("typescript-find-symbol" function (:user-visible-flag t :arguments ("&optional" "arg")) nil [83009 83807]) ("put" code nil nil [83834 83898]) ("put" code nil nil [83899 83963]) ("put" code nil nil [83965 84043]) ("put" code nil nil [84044 84112]) ("typescript--wait-for-matching-output" function (:arguments ("process" "regexp" "timeout" "&optional" "start")) nil [84114 85105]) ("typescript--typescript-handle" type (:members ("id" "process") :type "struct") nil [85107 85296]) ("typescript--typescript-handle-expired-p" function (:arguments ("x")) nil [85298 85438]) ("typescript--typescript-references" variable nil nil [85440 85551]) ("typescript--typescript-process" variable nil nil [85553 85640]) ("typescript--typescript-gc-idle-timer" variable nil nil [85642 85752]) ("typescript--typescript-last-gcs-done" variable nil nil [85754 85803]) ("typescript--moz-interactor" variable (:constant-flag t :default-value (replace-regexp-in-string "[ 
+]+" " " "(function(repl) {
+  repl.defineInteractor('typescript', {
+    onStart: function onStart(repl) {
+      if(!repl._typescriptObjects) {
+        repl._typescriptObjects = {};
+        repl._typescriptLastID = 0;
+        repl._typescriptGC = this._typescriptGC;
+      }
+      this._input = '';
+    },
+
+    _typescriptGC: function _typescriptGC(ids_in_use) {
+      var objects = this._typescriptObjects;
+      var keys = [];
+      var num_freed = 0;
+
+      for(var pn in objects) {
+        keys.push(Number(pn));
+      }
+
+      keys.sort(function(x, y) x - y);
+      ids_in_use.sort(function(x, y) x - y);
+      var i = 0;
+      var j = 0;
+
+      while(i < ids_in_use.length && j < keys.length) {
+        var id = ids_in_use[i++];
+        while(j < keys.length && keys[j] !== id) {
+          var k_id = keys[j++];
+          delete objects[k_id];
+          ++num_freed;
+        }
+        ++j;
+      }
+
+      while(j < keys.length) {
+        var k_id = keys[j++];
+        delete objects[k_id];
+        ++num_freed;
+      }
+
+      return num_freed;
+    },
+
+    _mkArray: function _mkArray() {
+      var result = [];
+      for(var i = 0; i < arguments.length; ++i) {
+        result.push(arguments[i]);
+      }
+      return result;
+    },
+
+    _parsePropDescriptor: function _parsePropDescriptor(parts) {
+      if(typeof parts === 'string') {
+        parts = [ parts ];
+      }
+
+      var obj = parts[0];
+      var start = 1;
+
+      if(typeof obj === 'string') {
+        obj = window;
+        start = 0;
+      } else if(parts.length < 2) {
+        throw new Error('expected at least 2 arguments');
+      }
+
+      for(var i = start; i < parts.length - 1; ++i) {
+        obj = obj[parts[i]];
+      }
+
+      return [obj, parts[parts.length - 1]];
+    },
+
+    _getProp: function _getProp(/*...*/) {
+      if(arguments.length === 0) {
+        throw new Error('no arguments supplied to getprop');
+      }
+
+      if(arguments.length === 1 &&
+         (typeof arguments[0]) !== 'string')
+      {
+        return arguments[0];
+      }
+
+      var [obj, propname] = this._parsePropDescriptor(arguments);
+      return obj[propname];
+    },
+
+    _putProp: function _putProp(properties, value) {
+      var [obj, propname] = this._parsePropDescriptor(properties);
+      obj[propname] = value;
+    },
+
+    _delProp: function _delProp(propname) {
+      var [obj, propname] = this._parsePropDescriptor(arguments);
+      delete obj[propname];
+    },
+
+    _typeOf: function _typeOf(thing) {
+      return typeof thing;
+    },
+
+    _callNew: function(constructor) {
+      if(typeof constructor === 'string')
+      {
+        constructor = window[constructor];
+      } else if(constructor.length === 1 &&
+                typeof constructor[0] !== 'string')
+      {
+        constructor = constructor[0];
+      } else {
+        var [obj,propname] = this._parsePropDescriptor(constructor);
+        constructor = obj[propname];
+      }
+
+      /* Hacky, but should be robust */
+      var s = 'new constructor(';
+      for(var i = 1; i < arguments.length; ++i) {
+        if(i != 1) {
+          s += ',';
+        }
+
+        s += 'arguments[' + i + ']';
+      }
+
+      s += ')';
+      return eval(s);
+    },
+
+    _callEval: function(thisobj, typescript) {
+      return eval.call(thisobj, typescript);
+    },
+
+    getPrompt: function getPrompt(repl) {
+      return 'EVAL>'
+    },
+
+    _lookupObject: function _lookupObject(repl, id) {
+      if(typeof id === 'string') {
+        switch(id) {
+        case 'global':
+          return window;
+        case 'nil':
+          return null;
+        case 't':
+          return true;
+        case 'false':
+          return false;
+        case 'undefined':
+          return undefined;
+        case 'repl':
+          return repl;
+        case 'interactor':
+          return this;
+        case 'NaN':
+          return NaN;
+        case 'Infinity':
+          return Infinity;
+        case '-Infinity':
+          return -Infinity;
+        default:
+          throw new Error('No object with special id:' + id);
+        }
+      }
+
+      var ret = repl._typescriptObjects[id];
+      if(ret === undefined) {
+        throw new Error('No object with id:' + id + '(' + typeof id + ')');
+      }
+      return ret;
+    },
+
+    _findOrAllocateObject: function _findOrAllocateObject(repl, value) {
+      if(typeof value !== 'object'  && typeof value !== 'function') {
+        throw new Error('_findOrAllocateObject called on non-object('
+                        + typeof(value) + '): '
+                        + value)
+      }
+
+      for(var id in repl._typescriptObjects) {
+        id = Number(id);
+        var obj = repl._typescriptObjects[id];
+        if(obj === value) {
+          return id;
+        }
+      }
+
+      var id = ++repl._typescriptLastID;
+      repl._typescriptObjects[id] = value;
+      return id;
+    },
+
+    _fixupList: function _fixupList(repl, list) {
+      for(var i = 0; i < list.length; ++i) {
+        if(list[i] instanceof Array) {
+          this._fixupList(repl, list[i]);
+        } else if(typeof list[i] === 'object') {
+          var obj = list[i];
+          if(obj.funcall) {
+            var parts = obj.funcall;
+            this._fixupList(repl, parts);
+            var [thisobj, func] = this._parseFunc(parts[0]);
+            list[i] = func.apply(thisobj, parts.slice(1));
+          } else if(obj.objid) {
+            list[i] = this._lookupObject(repl, obj.objid);
+          } else {
+            throw new Error('Unknown object type: ' + obj.toSource());
+          }
+        }
+      }
+    },
+
+    _parseFunc: function(func) {
+      var thisobj = null;
+
+      if(typeof func === 'string') {
+        func = window[func];
+      } else if(func instanceof Array) {
+        if(func.length === 1 && typeof func[0] !== 'string') {
+          func = func[0];
+        } else {
+          [thisobj, func] = this._parsePropDescriptor(func);
+          func = thisobj[func];
+        }
+      }
+
+      return [thisobj,func];
+    },
+
+    _encodeReturn: function(value, array_as_mv) {
+      var ret;
+
+      if(value === null) {
+        ret = ['special', 'null'];
+      } else if(value === true) {
+        ret = ['special', 'true'];
+      } else if(value === false) {
+        ret = ['special', 'false'];
+      } else if(value === undefined) {
+        ret = ['special', 'undefined'];
+      } else if(typeof value === 'number') {
+        if(isNaN(value)) {
+          ret = ['special', 'NaN'];
+        } else if(value === Infinity) {
+          ret = ['special', 'Infinity'];
+        } else if(value === -Infinity) {
+          ret = ['special', '-Infinity'];
+        } else {
+          ret = ['atom', value];
+        }
+      } else if(typeof value === 'string') {
+        ret = ['atom', value];
+      } else if(array_as_mv && value instanceof Array) {
+        ret = ['array', value.map(this._encodeReturn, this)];
+      } else {
+        ret = ['objid', this._findOrAllocateObject(repl, value)];
+      }
+
+      return ret;
+    },
+
+    _handleInputLine: function _handleInputLine(repl, line) {
+      var ret;
+      var array_as_mv = false;
+
+      try {
+        if(line[0] === '*') {
+          array_as_mv = true;
+          line = line.substring(1);
+        }
+        var parts = eval(line);
+        this._fixupList(repl, parts);
+        var [thisobj, func] = this._parseFunc(parts[0]);
+        ret = this._encodeReturn(
+          func.apply(thisobj, parts.slice(1)),
+          array_as_mv);
+      } catch(x) {
+        ret = ['error', x.toString() ];
+      }
+
+      var TYPESCRIPTON = Components.classes['@mozilla.org/dom/typescripton;1'].createInstance(Components.interfaces.nsITYPESCRIPTON);
+      repl.print(TYPESCRIPTON.encode(ret));
+      repl._prompt();
+    },
+
+    handleInput: function handleInput(repl, chunk) {
+      this._input += chunk;
+      var match, line;
+      while(match = this._input.match(/.*\\n/)) {
+        line = match[0];
+
+        if(line === 'EXIT\\n') {
+          repl.popInteractor();
+          repl._prompt();
+          return;
+        }
+
+        this._input = this._input.substring(line.length);
+        this._handleInputLine(repl, line);
+      }
+    }
+  });
+})
+")) nil [85805 94057]) ("typescript--typescript-encode-value" function (:arguments ("x")) nil [94059 95070]) ("typescript--typescript-prompt-regexp" variable (:constant-flag t :default-value "\\(repl[0-9]*\\)> $") nil [95072 95141]) ("typescript--typescript-repl-prompt-regexp" variable (:constant-flag t :default-value "^EVAL>$") nil [95142 95204]) ("typescript--typescript-repl-depth" variable nil nil [95205 95249]) ("typescript--typescript-wait-for-eval-prompt" function nil nil [95251 95611]) ("typescript--typescript-enter-repl" function nil nil [95613 97365]) ("typescript--typescript-leave-repl" function nil nil [97367 97849]) ("typescript--typescript-not" function (:arguments ("value")) nil [97851 97939]) ("typescript--typescript-true" function (:arguments ("value")) nil [97941 98030]) ("typescript--optimize-arglist" function (:arguments ("arglist")) nil [98052 99602]) ("typescript--typescript-get-service" function (:arguments ("class-name" "interface-name")) nil [99605 99811]) ("typescript--typescript-create-instance" function (:arguments ("class-name" "interface-name")) nil [99813 100025]) ("typescript--typescript-qi" function (:arguments ("object" "interface-name")) nil [100027 100195]) ("with-typescript" function (:arguments ("&rest" "forms")) nil [100197 103287]) ("typescript--typescript-array-as-list" variable nil nil [103289 103462]) ("typescript--typescript-decode-retval" function (:arguments ("result")) nil [103464 104169]) ("typescript--typescript-funcall" function (:arguments ("function" "&rest" "arguments")) nil [104171 105464]) ("typescript--typescript-new" function (:arguments ("constructor" "&rest" "arguments")) nil [105466 105776]) ("typescript--typescript-eval" function (:arguments ("thisobj" "typescript")) nil [105778 105914]) ("typescript--typescript-list" function (:arguments ("&rest" "arguments")) nil [105916 106180]) ("typescript--typescript-get" function (:arguments ("&rest" "props")) nil [106182 106304]) ("typescript--typescript-put" function (:arguments ("props" "value")) nil [106306 106426]) ("typescript-gc" function (:user-visible-flag t :arguments ("&optional" "force")) nil [106428 108032]) ("run-with-idle-timer" code nil nil [108034 108076]) ("typescript-eval" function (:user-visible-flag t :arguments ("typescript")) nil [108078 108570]) ("typescript--get-tabs" function nil nil [108572 111476]) ("typescript-read-tab-history" variable nil nil [111478 111518]) ("typescript--read-tab" function (:arguments ("prompt")) nil [111520 117160]) ("typescript--guess-eval-defun-info" function (:arguments ("pstate")) nil [117162 118100]) ("typescript--typescript-context" variable nil nil [118102 118296]) ("typescript--typescript-inserter" variable (:constant-flag t :default-value "(function(func_info,func) {
+    func_info.unshift('window');
+    var obj = window;
+    for(var i = 1; i < func_info.length - 1; ++i) {
+      var next = obj[func_info[i]];
+      if(typeof next !== 'object' && typeof next !== 'function') {
+        next = obj.prototype && obj.prototype[func_info[i]];
+        if(typeof next !== 'object' && typeof next !== 'function') {
+          alert('Could not find ' + func_info.slice(0, i+1).join('.') +
+                ' or ' + func_info.slice(0, i+1).join('.') + '.prototype');
+          return;
+        }
+
+        func_info.splice(i+1, 0, 'prototype');
+        ++i;
+      }
+    }
+
+    obj[func_info[i]] = func;
+    alert('Successfully updated '+func_info.join('.'));
+  })") nil [118298 119055]) ("typescript-set-typescript-context" function (:user-visible-flag t :arguments ("context")) nil [119057 119315]) ("typescript--get-typescript-context" function nil nil [119317 120062]) ("typescript--typescript-content-window" function (:arguments ("context")) nil [120064 120296]) ("typescript--make-nsilocalfile" function (:arguments ("path")) nil [120298 120543]) ("typescript--typescript-add-resource-alias" function (:arguments ("alias" "path")) nil [120545 121119]) ("typescript-eval-defun" function (:user-visible-flag t) nil [121121 125264]) ("define-derived-mode" code nil nil [125300 128263]) ("eval-after-load" code nil nil [128280 128422]) ("typescript" package nil nil [128424 128445]))
+    :file "TypeScript.el"
+    :pointmax 128524
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

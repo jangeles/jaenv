@@ -1,0 +1,106 @@
+#!/bin/bash
+
+/usr/bin/find \
+    $CODEBASE_HOME/controller \
+    $CODEBASE_HOME/ux/ui/view-main/src/flex \
+    $CODEBASE_HOME/ux/ui/shared \
+    $CODEBASE_HOME/eum \
+    $CODEBASE_HOME/eum-shared/src \
+    $CODEBASE_HOME/eum-cloud/src \
+    $CODEBASE_HOME/eum-cloud/test \
+    $CODEBASE_HOME/agent/rum \
+    $CODEBASE_HOME/agent/sdk/src/java \
+    $CODEBASE_HOME/agent/shared/src/java \
+    $CODEBASE_HOME/agent/shared/test/java \
+    $CODEBASE_HOME/automation/controller-commander/src \
+    $CODEBASE_HOME/analytics \
+    $CODEBASE_HOME/push-notification \
+     -name \*.java -print 
+
+/usr/bin/find \
+    $CODEBASE_HOME/ux/ui/view-main/src/web \
+    $CODEBASE_HOME/ux/ui/platform \
+    -name \*.html -print
+
+/usr/bin/find \
+    $CODEBASE_HOME/ux/ui/view-main/src/web \
+    $CODEBASE_HOME/ux/ui/platform \
+    -name \*.js -print
+
+/usr/bin/find \
+    $CODEBASE_HOME/ux/ui/view-main/src/web \
+    $CODEBASE_HOME/ux/ui/platform \
+    -name \*.ts -print
+
+/usr/bin/find \
+    $CODEBASE_HOME/ux/ui/view-main/src/web \
+    $CODEBASE_HOME/ux/ui/platform \
+    -name \*.scss -print
+
+/usr/bin/find \
+    $CODEBASE_HOME/ux/ui/assets/src \
+    -name \*.svg -print
+
+
+/usr/bin/find \
+     $CODEBASE_HOME/controller \
+     $CODEBASE_HOME/ux/ui/view-main/src/flex \
+     $CODEBASE_HOME/ux/ui/shared/src \
+     -name "*.as" -print
+
+/usr/bin/find \
+     $CODEBASE_HOME/controller \
+     $CODEBASE_HOME/ux/ui/view-main/src/flex \
+     $CODEBASE_HOME/ux/ui/shared/src \
+     -name "*.mxml" -print
+
+/usr/bin/find \
+     $CODEBASE_HOME/ux/iOS-UI/AppDynamics \
+     -name \*.h -print
+
+/usr/bin/find \
+     $CODEBASE_HOME/ux/iOS-UI/AppDynamics \
+     -name \*.m -print
+
+/usr/bin/find \
+     $CODEBASE_HOME/ux/iOS-UI/AppDynamics \
+     -name \*.swift -print
+
+/usr/bin/find \
+     $CODEBASE_HOME/ux/android-UI/AppDynamics \
+     -name \*.java -print
+
+#find \
+#     $CODEBASE_HOME/controller \
+#     $CODEBASE_HOME/utils \
+#     $CODEBASE_HOME/ux/ui/view-main/src/flex \
+#     $CODEBASE_HOME/ux/ui/shared/src \
+#     -name \*.mxml -print | \
+#           grep -v "binding-generated" | \
+#           grep -v "\-generated.as" | \
+#           grep -v "\-interface.as" | \
+#           grep -v "/flex/generated/"
+
+#find \
+#     $CODEBASE_HOME/controller \
+#     $CODEBASE_HOME/utils \
+#     $CODEBASE_HOME/ux/ui/view-main/src/flex \
+#     $CODEBASE_HOME/ux/ui/shared/src \
+#     $CODEBASE_HOME/shared/src \
+#     -name \*.css -print 
+
+#find \
+#     $CODEBASE_HOME/controller \
+#     $CODEBASE_HOME/utils \
+#     $CODEBASE_HOME/ux/ui/view-main/src/flex \
+#     $CODEBASE_HOME/ux/ui/shared/src \
+#     $CODEBASE_HOME/shared/src -print \
+#     -name deploy.xml -o -name build.xml | grep -v "\.svn"
+
+
+
+           
+
+
+
+
