@@ -123,7 +123,7 @@ set-eum() {
         useShadowEUM
         EUM_ACCOUNT=jangeles
         EUM_APP_KEY_PREFIX=jange
-    elif [ "$HOSTNAME" == "pxdemo.corp.appdynamics.com" ] ; then
+    elif [ "${HOSTNAME:0:6}" == "pxdemo" ] ; then
         useLocalOnPremEUM
         EUM_ACCOUNT=pxdemo
         EUM_APP_KEY_PREFIX=pxd
