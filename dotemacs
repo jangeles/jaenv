@@ -1,0 +1,310 @@
+;;; jangeles .emacs file
+(setq load-path (cons "~/Dropbox/emacs/site-lisp" load-path))
+
+;;;(add-to-list 'load-path "~/Dropbox/emacs/jde-2.3.5.1/lisp")
+;;;(add-to-list 'load-path "~/Dropbox/emacs/cedet-1.0beta3b/common")
+;;;(add-to-list 'load-path "~/Dropbox/emacs/magit-1.2.0")
+;;;(load-file "~/Dropbox/emacs/cedet-1.0beta3b/common/cedet.el")
+;;;(load-file "~/Dropbox/emacs/site-lisp/TypeScript.el")
+;;;(add-to-list 'load-path "~/Dropbox/emacs/pub/comp/os/unix/gnu/elib/elib-1.0")
+
+;;;(require 'jde)
+;;;(require 'magit)
+
+(if (eq system-type 'darwin)
+    (setq x-fixed-font-alist
+       '("Font Menu"
+        ("Monaco"
+        ("Monaco 9" "-apple-monaco-medium-r-normal--9-90-72-72-m-90-iso10646-1")
+        ("Monaco 10" "-apple-monaco-medium-r-normal--10-0-72-72-m-0-iso10646-1")
+        ("Monaco 11" "-apple-monaco-medium-r-normal--11-110-72-72-m-110-iso10646-1")
+        ("Monaco 12" "-apple-monaco-medium-r-normal--12-0-72-72-m-0-iso10646-1"))
+        ("Andale"
+        ("Andale 9" "-apple-andale mono-medium-r-normal--9-0-72-72-m-0-iso10646-1")
+        ("Andale 10" "-apple-andale mono-medium-r-normal--10-100-72-72-m-100-iso10646-1")
+        ("Andale 11" "-apple-andale mono-medium-r-normal--11-0-72-72-m-0-iso10646-1")
+        ("Andale 12" "-apple-andale mono-medium-r-normal--12-120-72-72-m-120-iso10646-1")
+        ("Andale 13" "-apple-andale mono-medium-r-normal--13-0-72-72-m-0-iso10646-1"))
+        ("Courier New"
+        ("Courier New 9" "-apple-courier new-medium-r-normal--9-90-72-72-m-90-iso10646-1")
+        ("Courier New 10" "-apple-courier new-medium-r-normal--10-0-72-72-m-0-iso10646-1")
+        ("Courier New 11" "-apple-courier new-medium-r-normal--11-110-72-72-m-110-iso10646-1")
+        ("Courier New 12" "-apple-courier new-medium-r-normal--12-0-72-72-m-0-iso10646-1"))
+        ("Courier"
+        ("Courier 10" "-apple-courier-medium-r-normal--10-100-72-72-m-100-iso10646-1")
+        ("Courier 11" "-apple-courier-medium-r-normal--11-0-72-72-m-0-iso10646-1")
+        ("Courier 12" "-apple-courier-medium-r-normal--12-120-72-72-m-120-iso10646-1"))
+        ("Consolas"
+        ("Consolas 9" "-apple-consolas-medium-r-normal--9-0-72-72-m-0-iso10646-1")
+        ("Consolas 10" "-apple-consolas-medium-r-normal--10-100-72-72-m-100-iso10646-1")
+        ("Consolas 11" "-apple-consolas-medium-r-normal--11-110-72-72-m-110-iso10646-1")
+        ("Consolas 12" "-apple-consolas-medium-r-normal--12-120-72-72-m-120-iso10646-1"))
+        ("Menlo"
+        ("Menlo 9" "-apple-menlo-medium-r-normal--9-0-72-72-m-0-iso10646-1")
+        ("Menlo 10" "-apple-menlo-medium-r-normal--10-100-72-72-m-100-iso10646-1")
+        ("Menlo 11" "-apple-menlo-medium-r-normal--11-110-72-72-m-110-iso10646-1")
+        ("Menlo 12" "-apple-menlo-medium-r-normal--12-120-72-72-m-120-iso10646-1"))
+)))
+
+;;; The default font on my mac
+(if (eq system-type 'darwin) (set-default-font "-apple-menlo-medium-r-normal--11-110-72-72-m-110-iso10646-1"))
+
+;;; The default font on my mac
+(if (eq system-type 'darwin) (setq mac-option-key-is-meta nil))
+(if (eq system-type 'darwin) (setq mac-command-key-is-meta t))
+(if (eq system-type 'darwin) (setq mac-command-modifier 'meta))
+(if (eq system-type 'darwin) (setq mac-option-modifier nil))
+
+
+;;; The default font on windows
+(if (eq system-type 'windows-nt) (set-default-font "-outline-Consolas-normal-r-normal-normal-12-82-96-96-c-*-iso8859-1"))
+
+(set-background-color "white")
+(setq column-number-mode t)
+(setq frame-title-format "%f")
+(add-to-list 'default-frame-alist '(width . 80))
+(add-to-list 'default-frame-alist '(height . 50))
+(add-to-list 'default-frame-alist '(font . "-apple-menlo-medium-r-normal--11-110-72-72-m-110-iso10646-1"))
+;;;
+;;;(set-frame-parameter (selected-frame) 'alpha '(95 90))
+;;;(add-to-list 'default-frame-alist '(alpha 95 90))
+;;;
+
+(if (eq system-type 'darwin)
+(setenv "PATH" ".:/Users/jangeles/bin:/Users/jangeles/dev/apache-ant-1.6.5/bin:/usr/local/bin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/X11R6/bin"))
+
+;;; Start gnuserv so I can send files to one emacs session
+(server-start)
+(put 'narrow-to-region 'disabled nil)
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;;; emacs 22
+(define-key minibuffer-local-filename-completion-map (kbd "SPC")
+'minibuffer-complete-word)
+
+(define-key minibuffer-local-must-match-filename-map (kbd "SPC")
+'minibuffer-complete-word)
+
+(if (eq system-type 'darwin)
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(case-fold-search t)
+ '(current-language-environment "Latin-1")
+ '(default-input-method "latin-1-prefix")
+ '(global-font-lock-mode t nil (font-lock))
+ '(indent-tabs-mode nil)
+ '(inhibit-startup-screen t)
+ '(java-mode-hook (quote (java-mode-indent-annotations-setup)))
+ '(jde-ant-read-target t)
+ '(jde-jdk-registry (quote (("1.6.0_24" . "/System/Library/Frameworks/JavaVM.framework/Versions/Current"))))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil)
+ '(transient-mark-mode t)
+ '(truncate-partial-width-windows nil)
+ '(focus-follows-mouse t)
+ '(visible-bell nil)))
+
+(if (eq system-type 'windows-nt)
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(case-fold-search t)
+ '(current-language-environment "Latin-1")
+ '(default-input-method "latin-1-prefix")
+ '(global-font-lock-mode t nil (font-lock))
+ '(indent-tabs-mode nil)
+ '(inhibit-startup-screen t)
+ '(java-mode-hook (quote (java-mode-indent-annotations-setup)))
+ '(jde-ant-read-target t)
+ '(jde-jdk-registry (quote (("1.6.0_20" . "C:/Program Files (x86)/Java/jdk1.6.0_24"))))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil)
+ '(transient-mark-mode t)
+ '(truncate-partial-width-windows nil)
+ '(visible-bell nil)))
+
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(ecb-default-general-face ((((class color) (background light)) (:height 1.0 :family "Arial")))))
+
+;;; My custom key bindings
+(global-set-key "\M-g" 'goto-line)
+(global-set-key "\M-r" 'replace-string)
+(global-set-key "\M-q" 'query-replace)
+(global-set-key [?\C-<] 'beginning-of-buffer)
+(global-set-key [?\C->] 'end-of-buffer)
+(global-set-key "\C-x5" 'split-window-horizontally)
+(global-set-key "\C-h" 'delete-region)
+(global-set-key "\C-j" 'copy-region-as-killed)
+(global-set-key "\C-z" 'undo)
+(global-set-key "\C-xn" 'next-multiframe-window)
+(global-set-key "\C-xp" 'previous-multiframe-window)
+(global-set-key "\C-xn" 'narrow-to-region)
+(global-set-key "\C-xt" 'auto-revert-tail-mode)
+
+(global-set-key "\C-xw" 'widen)
+(global-set-key "\C-xg" 'insert-register)
+
+;;(global-set-key [f3] 'find-tag)
+(global-set-key [f7] 'jde-ant-build)
+(global-set-key [f11] 'next-multiframe-window)
+(global-set-key [f12] 'previous-multiframe-window)
+(global-set-key [C-tab] 'other-frame)
+
+;; Bash
+;; For the interactive shell
+(if (eq window-system 'w32)
+(setq explicit-shell-file-name "c:/cygwin/bin/bash.exe"))
+
+;; For subprocesses invoked via the shell (e.g., "shell -c command")
+(if (eq window-system 'w32)
+(setq shell-file-name "c:/cygwin/bin/bash.exe"))
+
+;;; Describe the windows font
+(if (eq window-system 'w32)        ; emacs 20 & up
+    (defun insert-x-style-font()
+      "Insert a string in the X format which describes a font the
+user can select from the Windows font selector."
+      (interactive)
+      (insert (prin1-to-string (w32-select-font)))))
+
+;;;
+(require 'java-mode-indent-annotations)
+
+;;; utf-8
+
+(require 'un-define "un-define" t)
+(set-buffer-file-coding-system 'utf-8 'utf-8-unix)
+(set-default buffer-file-coding-system 'utf-8-unix)
+(set-default-coding-systems 'utf-8-unix)
+(prefer-coding-system 'utf-8-unix)
+(set-default default-buffer-file-coding-system 'utf-8-unix)
+
+;;; Actionscript mode
+(autoload 'actionscript-mode "actionscript-mode"
+  "Major mode for editing ActionScript files." t)
+
+;;;(add-to-list 'auto-mode-alist '("\\.as[123]?$" . actionscript-mode))
+(setq default-tab-width 4)
+
+;; When doing ecmascript/actionscript, modify style to match the
+;; default used by Adobe's CS and FlashDevelop - with the exception of
+;; using spaces instead of tabs.
+(defun init-ecmascript-mode ()
+  (add-hook 'ecmascript-mode-hook
+	    (lambda ()
+	      (c-set-offset 'substatement-open 0)
+	      (setq indent-tabs-mode nil)
+	      (setq c-basic-offset 4)
+	      (setq default-tab-width 4))))
+
+;; Load known-to-be-common packages if installed and not already loaded. Each
+;; item in the list of libraries must be either the name of the library, or
+;; a list containing the name of the library and an initialization function
+;; to call after loading it (or if it is already loaded).
+(dolist (lib (list "erc-auto"
+		   (list "ecmascript-mode" #'init-ecmascript-mode)))
+  (let ((lib-name (if (listp lib) (car lib) lib))
+	(lib-init-fn (if (listp lib) (cadr lib) nil)))
+    (when (locate-library lib-name)
+      (let ((lib-sym (intern lib-name)))
+	(when (not (featurep lib-sym))
+	  (require lib-sym))
+	(when lib-init-fn (funcall lib-init-fn))))))
+
+;; Add proper extension -> mode mappings
+(add-to-list 'auto-mode-alist '("\\.icc$" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.ih$"  . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.as[123]?$" . ecmascript-mode))
+(add-to-list 'auto-mode-alist '("\\.mxml?$" . ecmascript-mode))
+
+;;(require 'ecb)
+(autoload 'gnuserv-start "gnuserv-compat"
+          "Allow this Emacs process to be a server for client processes."
+          t)
+
+;; Disable annoying "Save abbrevs" popup.
+(setq save-abbrevs nil)
+
+(fset 'open-source-file-from-shell
+   [?\C-a ?\C-  ?\C-e escape ?x ?c ?o ?p ?y ?- ?r ?e ?g ?i ?o ?n return escape ?> ?e ?  escape ?x ?y ?a ?n ?k return return])
+(global-set-key [f3] 'open-source-file-from-shell)
+
+(fset 'execute-line-in-shell
+   [?\C-a ?\C-a ?\C-  ?\C-e escape ?x ?c ?o ?p ?y ?- ?r ?e ?g ?i ?o ?n escape ?> return escape ?> escape ?x ?t backspace ?y ?a ?n ?k return return])
+(global-set-key [f2] 'execute-line-in-shell)
+
+
+;; SQL
+(setq sql-mysql-program "~/work/appDynamics1/controller-tmp/mysql/bin/mysql")
+(setq sql-user "controller")
+(setq sql-database "controller")
+(setq sql-password "controller")
+(setq sql-server "localhost")
+
+(find-file "~/Dropbox/ad.sql")
+;;;(find-file "~/Dropbox/svnNotes")
+
+(fset 'java-getter-setter
+   [?\C-  ?\C-s ?  ?\C-b ?\C-x ?r ?x ?1 ?\C-f ?\C-  ?\C-s ?\; ?\C-b ?\C-x ?r ?x ?2 ?\C-r ?  ?\C-f ?\C-f ?  ?\C-b ?\C-b ?\M-u escape ?\\ ?\C-b ?\C-  ?\C-s ?\; ?\C-b ?\C-x ?r ?x ?3 ?\C-a tab ?p ?u ?b ?l ?i ?c ?  ?\C-s ?  ?\C-f ?\C-b ?g ?e ?t ?\C-e ?\C-b ?( ?) ?  ?{ return tab ?r ?e ?t ?u ?r ?n ?  ?t ?h ?i ?s ?. ?\C-x ?g ?2 ?\C-e return ?} return return tab ?p ?u ?b ?l ?i ?c ?  ?c ?o ?i ?s backspace backspace backspace backspace ?v ?o ?i ?f backspace ?d ?  ?s ?e ?t ?\C-x ?g ?3 ?\C-e ?( ?\C-x ?g ?1 ?\C-e ?  ?\C-x ?g ?2 ?\C-e ?) ?\S-  ?{ return tab ?r backspace ?t ?h ?i ?s ?. ?\C-x ?g ?2 ?\C-e ?  ?= ?  ?\C-x ?g ?2 ?\C-e ?\; return ?} ?\C-a tab ?\C-n return tab])
+
+;; Load typescript mode on .ts
+(setq auto-mode-alist (cons '("\\.ts$" . typescript-mode) auto-mode-alist))
+
+;; Load css mode on .scss
+(setq auto-mode-alist (cons '("\\.scss$" . css-mode) auto-mode-alist))
+
+;;;(require 'typescript)
+;;;(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
+
+;;;NEW
+;;;(pushnew '(tsc ("^[/A-Za-z0-9]+.ts\(\\[0-9]+],[0-9]+\)" 2 1 3))
+;;;compilation-error-regexp-alist-alist)
+;;;
+
+
+;;;file
+;;;(add-to-list
+;;; 'compilation-error-regexp-alist
+;;; '("\\(^/.*.ts\\)" 1));
+
+;;;(add-to-list
+;;; 'compilation-error-regexp-alist
+;;; '("\\(^/.*.ts\\)(\\([0-9].*\\),\\([0-9].*\\))" 1 2 3));
+
+;;; shells
+(shell "shell-build")
+(shell "shell-notifcations")
+(shell)
+
+;;; files
+(find-file "~/Dropbox/dotbashrc")
+(find-file "~/Dropbox/dotalias.bash")
+(find-file "~/Dropbox/dotemacs")
+(find-file "~/Dropbox/joe.sh")
+(find-file "~/Dropbox/environmentSetup.sh")
+(find-file "~/work/appDynamics1/developer-productivity/ui/bin/ui-tools-aliases.sh")
+(find-file "~/work/appDynamics1/developer-productivity/ui/bin/init.sh")
+(find-file "~/work/appDynamics1/codebase/eum-cloud/tools/eum-tools")
+(find-file "~/work/appDynamics1/codebase/ux/ui/view-main/src/web/css/ui.scss")
+(find-file "~/work/appDynamics1/codebase/ux/ui/view-main/src/web/css/uiConfig.scss")
+(find-file "~/work/appDynamics1/codebase/ux/ui/view-main/config/locale/en_US/autogeneratedui.properties")
+(find-file "~/work/appDynamics1/codebase/ux/ui/view-main/config/locale/en_US/ui.properties")
+(find-file "~/work/appDynamics1/developer-productivity/ui/bin/generateIcons.sh")
+(find-file "~/work/appDynamics1/developer-productivity/ui/bin/ui-tools")
+
+(fset 'enable-tail
+   [escape ?x ?a ?u ?t ?o ?- ?r ?e ?v ?e ?r ?t ?- ?t ?a ?i ?l ?- ?m ?o ?d ?e return escape ?>])
+(global-set-key "\C-xt" 'enable-tail)
+
+;;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;;; (global-set-key "\M-s\M-s" 'shell)

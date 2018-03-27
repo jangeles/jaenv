@@ -1,0 +1,132 @@
+# Shell
+
+#echo "Starting dotbaserc"
+
+export BASH_ENV=~/.bash_profile
+PS1="\h:\#> "
+
+#ulimit -n 65536
+#ulimit -u 2048
+
+umask 000
+shopt -s cdspell
+
+case $OSTYPE in
+
+    linux-gnu)
+    export POSTGRES_HOME=/opt/PostgreSQL/9.0
+    export JAVA_HOME=/home/jangeles/dev/jdk1.6.0_43
+    export ANT_HOME=/home/jangeles/dev/apache-ant-1.8.2
+    export ANT_OPTS='-ms128m -mx1024m'
+    export M2_HOME=/home/jangeles/dev/apache-maven-2.2.1
+    export M2=/home/jangeles/dev/apache-maven-2.2.1/bin
+    export PATH=$POSTGRES_HOME/bin:$M2_HOME/bin:$ANT_HOME/bin:$JAVA_HOME/bin:$PATH
+    source /mnt/hgfs/jangeles/Dropbox/dotalias.bash
+    ;;
+
+    darwin*)
+    export HOSTNAME=`/bin/hostname`
+    export CPU=darwin
+    export POSTGRES_HOME=/usr/local/pgsql
+    # 2014-04-07 - Commented this line out to use Java 7
+    #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+    export MVN_HOME=/Users/jangeles/dev/apache-maven-3.0.5
+    case $HOSTNAME in
+         mac.local)
+                export POSTGRES_HOME=/Library/PostreSQL/8.3
+         ;;
+    esac
+#    export GRADLE_HOME=/Users/jangeles/dev/gradle-2.1
+    export ANT_HOME=/Users/jangeles/dev/apache-ant-1.9.7
+    export ANT_OPTS=-Xmx3048M
+    #export ANT_OPTS='-ms128m -mx1024m'
+    #export MAGICK_HOME=/Users/jangeles/dev/ImageMagick-6.5.8
+    #export SUBVERSION_HOME=/opt/subversion
+    #export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$MAGICK_HOME/lib:$SUBVERSION_HOME/lib
+    #export M2_HOME=/Users/jangeles/dev/apache-maven-3.0.3
+    #export M2=/Users/jangeles/dev/apache-maven-3.0.3/bin
+    #export MAVEN_OPTS='-Xmx1024m -XX:MaxPermSize=128m'
+    #export ROO=/Users/jangeles/dev/spring-roo-1.1.0.M3
+    #export PATH=$M2_HOME/bin:$ROO/bin:$PATH
+    export ANDROID_HOME=/Users/jangeles/Library/Android
+    #source ~/work/developer-productivity/ui/bin/joe-dotalias.bash
+    source ~/Dropbox/dotalias.bash
+    #source ~/Dropbox/dotalias.bash.BACKUP_20140721
+    export GRADLE_OPTS=-Xmx1280m
+    ;;
+
+    cygwin)
+    export CYGWIN=nodosfilewarning
+    export HOSTNAME=$COMPUTERNAME
+    export LC_ALL=C
+    export JAVA_HOME=/cygdrive/c/Program\ Files\ \(x86\)/Java/jdk1.6.0_24
+    export ANT_HOME=/cygdrive/c/Users/jangeles/dev/apache-ant-1.7.0
+    export ANT_OPTS='-ms128m -mx1024m'
+    source ~/Dropbox/dotalias.bash
+    export PATH=/cygdrive/c/Program\ Files/PuTTY:$PATH
+    ;;
+
+esac
+
+#export JAVA_HOME=`/usr/libexec/java_home`
+
+# prompt
+PS1="\w:\#> "
+
+export EDITOR='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait'
+
+# If you put this in your .profile (or equivalent init file): 
+# export NEW_UI_BUILD=true
+# Then the gradle builds for the UI should be smarter about not building Flex unless Flex source code has changed. 
+# This should in theory make redeploy be faster (because Flex is the slowest): 
+# gradle reset -PrecreateDbschema=false -PinstrumentController=true
+export NEW_UI_BUILD=true
+
+# git
+export GIT_PAGER=cat
+
+# Path
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$ANT_HOME/bin:$MVN_HOME/bin:~/dev/mysql/bin
+export BASEPATH=~jangeles/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/developer-productivity/ui/bin
+
+#source ~/Dropbox/git-completion.bash
+
+# Joe's AWS account
+export AWS_ACCESS_KEY=AKIAJUHQ2WVCRG4P6EMQ
+export AWS_SECRET_KEY=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
+
+# Docker setup
+#eval "$(docker-machine env default)"
+
+# Set Finder label color
+label(){
+  if [ $# -lt 2 ]; then
+    echo "USAGE: label [0-7] file1 [file2] ..."
+    echo "Sets the Finder label (color) for files"
+    echo "Default colors:"
+    echo " 0  No color"
+    echo " 1  Orange"
+    echo " 2  Red"
+    echo " 3  Yellow"
+    echo " 4  Blue"
+    echo " 5  Purple"
+    echo " 6  Green"
+    echo " 7  Gray"
+  else
+    osascript - "$@" << EOF
+    on run argv
+        set labelIndex to (item 1 of argv as number)
+        repeat with i from 2 to (count of argv)
+          tell application "Finder"
+              set theFile to POSIX file (item i of argv) as alias
+              set label index of theFile to labelIndex
+          end tell
+        end repeat
+    end run
+EOF
+  fi
+}
+
+#source ~/bin/git-completion.bash
+
+#echo "Ending dotbashrc"
