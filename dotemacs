@@ -1,12 +1,12 @@
 ;;; jangeles .emacs file
-(setq load-path (cons "~/Dropbox/emacs/site-lisp" load-path))
+(setq load-path (cons "~/jaenv/emacs/site-lisp" load-path))
 
-;;;(add-to-list 'load-path "~/Dropbox/emacs/jde-2.3.5.1/lisp")
-;;;(add-to-list 'load-path "~/Dropbox/emacs/cedet-1.0beta3b/common")
-;;;(add-to-list 'load-path "~/Dropbox/emacs/magit-1.2.0")
-;;;(load-file "~/Dropbox/emacs/cedet-1.0beta3b/common/cedet.el")
-;;;(load-file "~/Dropbox/emacs/site-lisp/TypeScript.el")
-;;;(add-to-list 'load-path "~/Dropbox/emacs/pub/comp/os/unix/gnu/elib/elib-1.0")
+;;;(add-to-list 'load-path "~/jaenv/emacs/jde-2.3.5.1/lisp")
+;;;(add-to-list 'load-path "~/jaenv/emacs/cedet-1.0beta3b/common")
+;;;(add-to-list 'load-path "~/jaenv/emacs/magit-1.2.0")
+;;;(load-file "~/jaenv/emacs/cedet-1.0beta3b/common/cedet.el")
+;;;(load-file "~/jaenv/emacs/site-lisp/TypeScript.el")
+;;;(add-to-list 'load-path "~/jaenv/emacs/pub/comp/os/unix/gnu/elib/elib-1.0")
 
 ;;;(require 'jde)
 ;;;(require 'magit)
@@ -250,8 +250,8 @@ user can select from the Windows font selector."
 (setq sql-password "controller")
 (setq sql-server "localhost")
 
-(find-file "~/Dropbox/ad.sql")
-;;;(find-file "~/Dropbox/svnNotes")
+(find-file "~/jaenv/ad.sql")
+;;;(find-file "~/jaenv/svnNotes")
 
 (fset 'java-getter-setter
    [?\C-  ?\C-s ?  ?\C-b ?\C-x ?r ?x ?1 ?\C-f ?\C-  ?\C-s ?\; ?\C-b ?\C-x ?r ?x ?2 ?\C-r ?  ?\C-f ?\C-f ?  ?\C-b ?\C-b ?\M-u escape ?\\ ?\C-b ?\C-  ?\C-s ?\; ?\C-b ?\C-x ?r ?x ?3 ?\C-a tab ?p ?u ?b ?l ?i ?c ?  ?\C-s ?  ?\C-f ?\C-b ?g ?e ?t ?\C-e ?\C-b ?( ?) ?  ?{ return tab ?r ?e ?t ?u ?r ?n ?  ?t ?h ?i ?s ?. ?\C-x ?g ?2 ?\C-e return ?} return return tab ?p ?u ?b ?l ?i ?c ?  ?c ?o ?i ?s backspace backspace backspace backspace ?v ?o ?i ?f backspace ?d ?  ?s ?e ?t ?\C-x ?g ?3 ?\C-e ?( ?\C-x ?g ?1 ?\C-e ?  ?\C-x ?g ?2 ?\C-e ?) ?\S-  ?{ return tab ?r backspace ?t ?h ?i ?s ?. ?\C-x ?g ?2 ?\C-e ?  ?= ?  ?\C-x ?g ?2 ?\C-e ?\; return ?} ?\C-a tab ?\C-n return tab])
@@ -286,11 +286,9 @@ user can select from the Windows font selector."
 (shell)
 
 ;;; files
-(find-file "~/Dropbox/dotbashrc")
-(find-file "~/Dropbox/dotalias.bash")
-(find-file "~/Dropbox/dotemacs")
-(find-file "~/Dropbox/joe.sh")
-(find-file "~/Dropbox/environmentSetup.sh")
+(find-file "~/jaenv/dotbashrc")
+(find-file "~/jaenv/dotalias.bash")
+(find-file "~/jaenv/dotemacs")
 (find-file "~/work/appDynamics1/developer-productivity/ui/bin/ui-tools-aliases.sh")
 (find-file "~/work/appDynamics1/developer-productivity/ui/bin/init.sh")
 (find-file "~/work/appDynamics1/codebase/eum-cloud/tools/eum-tools")
