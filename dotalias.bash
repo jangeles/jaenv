@@ -120,13 +120,13 @@ alias ports='sudo lsof -i -P | grep -i "listen"'
 #useLocalEUM
 set-eum() {
     if [ "$HOSTNAME" == "jangeles-mac" ] ; then
-        useShadowEUM
-        EUM_ACCOUNT=jangeles
-        EUM_APP_KEY_PREFIX=jange
+        useLocalEUM
+        export EUM_ACCOUNT=jangeles
+        export EUM_APP_KEY_PREFIX=jange
     elif [ "${HOSTNAME:0:6}" == "pxdemo" ] ; then
-        useLocalOnPremEUM
-        EUM_ACCOUNT=pxdemo
-        EUM_APP_KEY_PREFIX=pxd
+        useLocalEUM
+        export EUM_ACCOUNT=pxdemo
+        export EUM_APP_KEY_PREFIX=pxd
     else
         echo "set-eum failed for $HOSTNAME"
         exit -1
