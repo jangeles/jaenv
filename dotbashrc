@@ -1,5 +1,6 @@
 # Shell
 
+#Test update 3
 #echo "Starting dotbaserc"
 
 export BASH_ENV=~/.bash_profile
