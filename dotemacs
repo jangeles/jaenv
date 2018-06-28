@@ -105,7 +105,7 @@
  '(transient-mark-mode t)
  '(truncate-partial-width-windows nil)
  '(focus-follows-mouse t)
- '(visible-bell nil)))
+ '(visible-bell t)))
 
 (if (eq system-type 'windows-nt)
 (custom-set-variables
@@ -298,6 +298,7 @@ user can select from the Windows font selector."
 (find-file "~/work/appDynamics1/codebase/ux/ui/view-main/config/locale/en_US/ui.properties")
 (find-file "~/work/appDynamics1/developer-productivity/ui/bin/generateIcons.sh")
 (find-file "~/work/appDynamics1/developer-productivity/ui/bin/ui-tools")
+(find-file "~/notes.txt")
 
 (fset 'enable-tail
    [escape ?x ?a ?u ?t ?o ?- ?r ?e ?v ?e ?r ?t ?- ?t ?a ?i ?l ?- ?m ?o ?d ?e return escape ?>])

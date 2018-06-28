@@ -107,6 +107,7 @@ alias h3='git diff --name-only HEAD~3'
 alias ij='/Applications/IntelliJ\ IDEA\ 13\.app/bin/inspect.sh '
 
 alias ut='$APP_DYNAMICS_HOME/developer-productivity/ui/bin/ui-tools'
+alias ut2='$APP_DYNAMICS_HOME/developer-productivity/ui/bin/ui-tools2'
 alias et='$CODEBASE_HOME/eum-cloud/tools/eum-tools'
 
 
@@ -120,7 +121,7 @@ alias ports='sudo lsof -i -P | grep -i "listen"'
 #useLocalEUM
 set-eum() {
     if [ "$HOSTNAME" == "jangeles-mac" ] ; then
-        useLocalEUM
+        useShadowEUM
         export EUM_ACCOUNT=jangeles
         export EUM_APP_KEY_PREFIX=jange
     elif [ "${HOSTNAME:0:6}" == "pxdemo" ] ; then
@@ -163,6 +164,7 @@ alias app='cd $CODEBASE_HOME/ux/ui/view-main/src/web/app'
 alias assets='cd $CODEBASE_HOME/ux/ui/assets'
 alias cart='cd $CODEBASE_HOME/../cart'
 alias cb='cd $CODEBASE_HOME'
+alias ms='cd $CODEBASE_HOME/../mothership'
 alias acb='cd $CODEBASE_HOME/../analytics-codebase/analytics'
 alias ama='cd $CODEBASE_HOME/ux/android-UI/AppDynamics'
 alias ima='cd $CODEBASE_HOME/ux/iOS-UI/AppDynamics'
@@ -515,7 +517,7 @@ alias tn='/Users/jangeles/work/developer-productivity/ui/bin/terminal-notifier.a
 alias tns='/Users/jangeles/work/developer-productivity/ui/bin/terminal-notifier.app/Contents/MacOS/terminal-notifier -sticky -title "$NOW" -message  '
 
 # Switch current codebases
-alias ad1='cd ~/work/appDynamics1 ; export APP_DYNAMICS_HOME=~/work/appDynamics1 ; source ~/work/appDynamics1/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics1/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx1280m" ; export GRADLE_OPTS="-Xmx1280m" ; source ~/work/appDynamics1/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/jaenv/dotalias.bash ; export BASEPATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics1/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics1/controller ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/controller/gradlew /usr/local/bin ; pwd ; gitb '
+alias ad1='cd ~/work/appDynamics1 ; export APP_DYNAMICS_HOME=~/work/appDynamics1 ; source ~/work/appDynamics1/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics1/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx1280m" ; export GRADLE_OPTS="-Xmx1280m" ; source ~/work/appDynamics1/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/jaenv/dotalias.bash ; export BASEPATH=$PHP_HOME/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics1/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics1/controller ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/controller/gradlew /usr/local/bin ; pwd ; gitb '
 
 #alias ad1='cd ~/work/appDynamics1 ; export APP_DYNAMICS_HOME=~/work/appDynamics1 ; source ~/work/appDynamics1/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics1/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx1280m" ; export GRADLE_OPTS="-Xmx1280m" ; source ~/work/appDynamics1/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/Dropbox/dotalias.bash ; export BASEPATH=~jangeles/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics1/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics1/codebase ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/gradlew /usr/local/bin ; pwd ; gitb '
 alias ad2='cd ~/work/appDynamics2 ; export APP_DYNAMICS_HOME=~/work/appDynamics2 ; source ~/work/appDynamics2/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics2/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx2280m" ; export GRADLE_OPTS="-Xmx2280m" ; source ~/work/appDynamics2/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/Dropbox/dotalias.bash ; export BASEPATH=~jangeles/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics2/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS2="\\w:\\#> " ; cd ~/work/appDynamics2/codebase ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/gradlew /usr/local/bin ;pwd ; gitb '

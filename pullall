@@ -1,7 +1,26 @@
+echo "----------------------------------------"
+echo "pullall: starting..."
+echo "----------------------------------------"
+echo "git pull in $APPDYNAMICS_HOME/developer-productivity"
 cd $APPDYNAMICS_HOME/developer-productivity ; git pull
+echo "----------------------------------------"
+echo "git pull in $APPDYNAMICS_HOME/controller"
 cd $APPDYNAMICS_HOME/controller ; git pull
+echo "----------------------------------------"
+echo "git pull in $APPDYNAMICS_HOME/reports-service"
 cd $APPDYNAMICS_HOME/reports-service ; git pull
+echo "----------------------------------------"
+echo "git pull in $APPDYNAMICS_HOME/db-agent"
 cd $APPDYNAMICS_HOME/db-agent ; git pull
+echo "----------------------------------------"
+echo "git pull in $APPDYNAMICS_HOME/analytics-codebase/analytics"
 cd $APPDYNAMICS_HOME/analytics-codebase/analytics ; git pull
-cd $APPDYNAMICS_HOME/mothership ; mr pull
+echo "----------------------------------------"
+echo "git pull in $APPDYNAMICS_HOME/demo-apps"
 cd $APPDYNAMICS_HOME/demo-apps ; git pull
+echo "----------------------------------------"
+echo "mr pull in $APPDYNAMICS_HOME/mothership"
+cd $APPDYNAMICS_HOME/mothership ; mr pull
+echo "----------------------------------------"
+echo "pullall: done"
+echo "----------------------------------------"
