@@ -14,9 +14,12 @@ alias rgrep='find . -name \!:2 -exec grep -i \!^ {} /dev/null \\\;'
 alias more='less'
 alias mroe='less'
 alias ant='~/dev/apache-ant-1.7.0/bin/ant'
-alias gw='./gradlew'
+alias gw='cd $GREYWIND_HOME'
 alias g='./gradlew'
+alias y='yarn'
 alias gradle='$CODEBASE_HOME/gradlew'
+alias resetParticle='bin/setupMamp ; sleep 5; bin/setupParticleMacOS'
+alias yn='cd ~/work/why-not'
 
 alias dmcreate='docker-machine create -d virtualbox --virtualbox-disk-size="100000" --virtualbox-memory 8192 default'
 alias dmcreate-controller='docker-machine create -d virtualbox --virtualbox-disk-size="100000" --virtualbox-memory 4096 controller'
@@ -55,7 +58,11 @@ alias dock='cd $CODEBASE_HOME/automation/docker'
 alias pnprod='ssh -i ~/.ssh/particle-cms-1.pem ubuntu@particledev.net'
 
 alias ec1='cd ~/work/ECommerce1'
-alias pc='cd ~/work/particlecraft'
+alias pc='cd ~/work/particle1'
+alias pc1='cd ~/work/particle1'
+alias pc2='cd ~/work/particle2'
+alias pc3='cd ~/work/particle3'
+alias pc='cd ~/work/particle'
 alias dt='cd ~/work/designtech'
 
 alias clean-sc='find . -name semantic.cache -exec rm -Rf {} \;'
@@ -86,8 +93,7 @@ alias ..='cd ..'
 alias ...='cd ...'
 alias ....='cd ....'
 alias .....='cd .....'
-alias icons='cd ~/Google\ drive/UX/UI\ Kit/icons'
-
+alias icons='cd /Volumes/GoogleDrive/Team\ Drives/PX/Design\ Tech/Icons/ui-assets'
 alias jae='cd ~/work/jira-alerting-extension/jira-alerting-extension'
 
 # git
@@ -521,16 +527,18 @@ alias tn='/Users/jangeles/work/developer-productivity/ui/bin/terminal-notifier.a
 alias tns='/Users/jangeles/work/developer-productivity/ui/bin/terminal-notifier.app/Contents/MacOS/terminal-notifier -sticky -title "$NOW" -message  '
 
 # Switch current codebases
-alias ad1='cd ~/work/appDynamics1 ; export APP_DYNAMICS_HOME=~/work/appDynamics1 ; source ~/work/appDynamics1/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics1/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx1280m" ; export GRADLE_OPTS="-Xmx1280m" ; source ~/work/appDynamics1/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/jaenv/dotalias.bash ; export BASEPATH=$DT_HOME/icons:$PHP_HOME/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics1/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics1/controller ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/controller/gradlew /usr/local/bin ; pwd ; gitb '
-alias ad2='cd ~/work/appDynamics1 ; export APP_DYNAMICS_HOME=~/work/appDynamics2 ; source ~/work/appDynamics2/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics2/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx1280m" ; export GRADLE_OPTS="-Xmx1280m" ; source ~/work/appDynamics2/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/jaenv/dotalias.bash ; export BASEPATH=$DT_HOME/icons:$PHP_HOME/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics2/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics2/controller ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/controller/gradlew /usr/local/bin ; pwd ; gitb '
+alias ad1='cd ~/work/appDynamics1 ; export APP_DYNAMICS_HOME=~/work/appDynamics1 ; export GREYWIND_HOME=~/work/ati/greywind ; source ~/work/appDynamics1/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics1/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx1280m" ; export GRADLE_OPTS="-Xmx1280m" ; source ~/work/appDynamics1/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/jaenv/dotalias.bash ; export BASEPATH=$DT_HOME/iconTools:$PHP_HOME/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:$YARN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics1/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics1 ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/controller/gradlew /usr/local/bin ; pwd'
+
+alias ad2='cd ~/work/appDynamics2 ; export APP_DYNAMICS_HOME=~/work/appDynamics2 ; source ~/work/appDynamics2/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics2/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx1280m" ; export GRADLE_OPTS="-Xmx1280m" ; source ~/work/appDynamics2/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/jaenv/dotalias.bash ; export BASEPATH=$DT_HOME/iconTools:$PHP_HOME/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:$YARN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics2/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics2/controller ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/controller/gradlew /usr/local/bin ; pwd'
 
 alias uk='export UIKIT_HOME=$APP_DYNAMICS_HOME/ui/ui-kit ;cd $UIKIT_HOME ; export PATH=$UIKIT_HOME/build/yarn/yarn-v1.5.1/bin:$UIKIT_HOME/build/nodejs/node-v8.9.4-darwin-x64/bin:$BASEPATH'
+alias ua='cd ~/work/appDynamics1/ui/ui-assets'
 alias dk='export DASHKIT_HOME=$APP_DYNAMICS_HOME/ui/dash-kit ;cd $DASHKIT_HOME ; export PATH=$DASHKIT_HOME/build/yarn/yarn-v1.9.2/bin:$DASHKIT_HOME/build/nodejs/node-v8.9.4-darwin-x64/bin:$BASEPATH'
 alias aui='export APMUI_HOME=$APP_DYNAMICS_HOME/ui/apm-ui ;cd $APMUI_HOME ; export PATH=$APMUI_HOME/sample-app/build/yarn/yarn-v1.5.1/bin:$APMUI_HOME/sample-app/build/nodejs/node-v8.9.4-darwin-x64/bin:$BASEPATH'
 alias sui='export SIMUI_HOME=$APP_DYNAMICS_HOME/ui/sim-ui ;cd $SIMUI_HOME ; export PATH=$SIMUI_HOME/build/yarn/yarn-v1.6.0/bin:$APMUI_HOME/sample-app/build/nodejs/node-v8.9.4-darwin-x64/bin:$BASEPATH'
 
-#alias ad1='cd ~/work/appDynamics1 ; export APP_DYNAMICS_HOME=~/work/appDynamics1 ; source ~/work/appDynamics1/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics1/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx1280m" ; export GRADLE_OPTS="-Xmx1280m" ; source ~/work/appDynamics1/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/Dropbox/dotalias.bash ; export BASEPATH=~/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics1/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics1/codebase ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/gradlew /usr/local/bin ; pwd ; gitb '
-#alias ad3='cd ~/work/appDynamics3 ; export APP_DYNAMICS_HOME=~/work/appDynamics3 ; source ~/work/appDynamics3/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics3/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-XX:MaxPermSize=128M -Xmx1280m" ; export GRADLE_OPTS="-XX:MaxPermSize=128M -Xmx1280m" ; source ~/work/appDynamics3/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/Dropbox/dotalias.bash ; export BASEPATH=~jangeles/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics3/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics3/codebase ; pwd ; gitb '
+#alias ad1='cd ~/work/appDynamics1 ; export APP_DYNAMICS_HOME=~/work/appDynamics1 ; source ~/work/appDynamics1/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics1/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-Xmx1280m" ; export GRADLE_kOPTS="-Xmx1280m" ; source ~/work/appDynamics1/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/Dropbox/dotalias.bash ; export BASEPATH=~/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics1/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics1/codebase ; rm -f /usr/local/bin/gradlew ; ln -s $CODEBASE_HOME/gradlew /usr/local/bin ; pwd ; gitb '
+#alias ad3='cd ~/work/appDynamics3 ; export APP_DYNAMICS_HOME=~/work/appDynamics3 ; source ~/work/appDynamics3/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics3/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-XX:MaxPermSize=128M -Xmx1280m" ; export GRADLE_OPTS="-XX:MaxPermSize=128M -Xmx1280m" ; source ~/work/appDynamics3/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/Dropbox/dotalias.bash ; export BASEPATH=~jangeles/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics3/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics3/codebase ; pwd ; gitb '
 #alias ad4='cd ~/work/appDynamics4 ; export APP_DYNAMICS_HOME=~/work/appDynamics4 ; source ~/work/appDynamics4/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics4/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-XX:MaxPermSize=128M -Xmx1280m" ; export GRADLE_OPTS="-XX:MaxPermSize=128M -Xmx1280m" ; source ~/work/appDynamics4/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/Dropbox/dotalias.bash ; export BASEPATH=~jangeles/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics4/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics4/codebase ; pwd ; gitb '
 #alias ad5='cd ~/work/appDynamics5 ; export APP_DYNAMICS_HOME=~/work/appDynamics5 ; source ~/work/appDynamics5/developer-productivity/ui/bin/init.sh ; set-eum ; source ~/work/appDynamics5/developer-productivity/ui/bin/setJdkBasedOnBranch.sh ; export ANT_OPTS="-XX:MaxPermSize=128M -Xmx1280m" ; export GRADLE_OPTS="-XX:MaxPermSize=128M -Xmx1280m" ; source ~/work/appDynamics5/developer-productivity/ui/bin/ui-tools-aliases.sh ; source ~/Dropbox/dotalias.bash ; export BASEPATH=~jangeles/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/appDynamics5/developer-productivity/ui/bin ; export PATH=.:$CODEBASE_HOME/tools:$CODEBASE_HOME/automation/docker:$MYSQL_HOME/bin:$GLASSFISH_HOME/bin:$BASEPATH ; export PS1="\\w:\\#> " ; cd ~/work/appDynamics5/codebase ; pwd ; gitb '
 
@@ -712,7 +720,6 @@ alias gr='gradle --info --stacktrace'
 alias cloud='$CODEBASE_HOME/eum-cloud/cloud'
 alias eet='e $CODEBASE_HOME/eum-cloud/tools/eum-tools'
 alias et='$CODEBASE_HOME/eum-cloud/tools/eum-tools'
-alias aws='cat $CODEBASE_HOME/eum-cloud/resources/AwsStoreProperties.dev.properties'
 
 # cart
 #alias start-cart='pushd $CODEBASE_HOME/../cart ; ant clean install-cart start-cart ; popd'

@@ -34,6 +34,7 @@ case $OSTYPE in
     export MVN_HOME=/Users/jangeles/dev/apache-maven-3.0.5
     export PHP_HOME=/usr/local/opt/php@7.0
     export DT_HOME=~/work/designtech
+    export YARN_HOME=/Users/jangeles/dev/yarn/yarn-v1.12.3
     case $HOSTNAME in
          mac.local)
                 export POSTGRES_HOME=/Library/PostreSQL/8.3
@@ -89,14 +90,14 @@ export NEW_UI_BUILD=true
 export GIT_PAGER=cat
 
 # Path
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$ANT_HOME/bin:$MVN_HOME/bin:~/dev/mysql/bin
-export BASEPATH=~/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:~/dev/mysql/bin:~/work/designtech/iconTools:
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/git/bin:$ANT_HOME/bin:$MVN_HOME/bin:$YARN_HOME/bin:~/dev/mysql/bin
+export BASEPATH=~/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/git/bin:$JAVA_HOME/bin:$ANT_HOME/bin:$ANDROID_HOME/sdk/platform-tools:$ANDROID_HOME/sdk/tools:$MVN_HOME/bin:$YARN_HOME/bin:~/dev/mysql/bin:~/work/designtech/iconTools:
 
 #source ~/Dropbox/git-completion.bash
 
 # Joe's AWS account
-export AWS_ACCESS_KEY=AKIAJUHQ2WVCRG4P6EMQ
-export AWS_SECRET_KEY=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
+#export AWS_ACCESS_KEY=AKIAJUHQ2WVCRG4P6EMQ
+#export AWS_SECRET_KEY=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
 
 # Docker setup
 #eval "$(docker-machine env default)"
